@@ -18,6 +18,20 @@ function onDone(userId) {
     
 }
 
+function onReset(userId) {
+
+    fetch("/admin/resetUser", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId: userId }),
+    });
+
+    window.location.href = "/admin/viewUser";
+
+}
+
 function onDelete(userId) {
 
     fetch("/admin/deleteUser", {
@@ -31,4 +45,3 @@ function onDelete(userId) {
     window.location.href = "/admin/viewUser";
 
 }
-

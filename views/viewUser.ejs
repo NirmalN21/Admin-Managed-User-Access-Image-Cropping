@@ -35,14 +35,14 @@
                                     <td><%=user.username%></td>
                                     <td><img src="/uploads/<%=user.imgURL%>" alt="User Photo"></td>
                                     <td>
-                                        <button class="view-button btn-2" onClick="onDelete('<%= user.userId %>')">Delete</button>
+                                        <button class="view-button btn-2" onClick="onReset('<%= user.userId %>')">Delete</button>
                                     </td>
                                 <% }else if(user.applied){ %>
                                     <td><%=user.username%></td>
                                     <td><img src="/uploads/<%=user.imgURL%>" alt="User Photo"></td>
                                     <td>
                                         <button class="view-button btn-1" onClick="onDone('<%= user.userId %>')">Done</button>
-                                        <button class="view-button btn-2" onClick="onDelete('<%= user.userId %>')">Delete</button>
+                                        <button class="view-button btn-2" onClick="onReset('<%= user.userId %>')">Delete</button>
                                     </td>
                                 <% }else{ %>
                                     <td>-</td>
@@ -83,7 +83,7 @@
                                         <div>
                                             <span>Action</span>
                                             <div class="btn-container">
-                                                <button class="view-button btn-2" onClick="onDelete('<%= user.userId %>')">Delete</button>
+                                                <button class="view-button btn-2" onClick="onReset('<%= user.userId %>')">Delete</button>
                                             </div>
                                         </div>
                                     </div>
@@ -101,7 +101,7 @@
                                             <span>Action</span>
                                             <div class="btn-container">
                                                 <button class="view-button btn-1" onClick="onDone('<%= user.userId %>')">Done</button>
-                                                <button class="view-button btn-2" onClick="onDelete('<%= user.userId %>')">Delete</button>
+                                                <button class="view-button btn-2" onClick="onReset('<%= user.userId %>')">Delete</button>
                                             </div>
                                         </div>
                                     </div>
@@ -124,10 +124,6 @@
                                 </div>
                             <%}%>
                     <% }) %>
-                <% } else { %>    
-                    <span class="text-box">
-                        No user created
-                    </span>
                 <% } %>
             <% } else { %>
                 <div class="spinner-border" role="status">

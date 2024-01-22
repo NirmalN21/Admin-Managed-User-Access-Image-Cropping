@@ -25,5 +25,5 @@ app.use(userRoutes);
 app.use(adminRoutes);
 
 app.listen(port, () => {
-    console.log(`Server started at Port ${port}`);
+    console.log(`Server started at http://localhost:${port}`);
 });

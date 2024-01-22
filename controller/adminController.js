@@ -94,11 +94,27 @@ export const verifyUser = async (req, res) => {
     }
 }
 
-export const deleteUser = async (req, res) => {
+export const resetUser = async (req, res) => {
     try {
         const userId = req.body.userId;
 
         const findUser = await User.findOneAndUpdate({ userId: userId }, { applied: false, img: "", verified: false })
+
+        if (!findUser) {
+            return res.status(401).json({ error: "Invalid Credentials!!!" });
+        } else {
+            return res.status(200).json({ message: "User updated Successfuly!!!" });
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const deleteUser = async (req, res) => {
+    try {
+        const userId = req.body.userId;
+
+        const findUser = await User.findOneAndDelete({ userId: userId });
 
         if (!findUser) {
             return res.status(401).json({ error: "Invalid Credentials!!!" });

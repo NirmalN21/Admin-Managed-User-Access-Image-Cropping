@@ -52,7 +52,7 @@
                 <button class="view-button back" onclick="toggleSidebar(event)">&lt;
                     Back</button>
             </div>
-            <% if(foundUser){ %>
+            <% if(foundUser.applied){ %>
                 <div class="name-field">
                     <span class="name-label mb-2">Name</span>
                     <span class="name">
@@ -64,21 +64,26 @@
                     <span class="name-label mb-2">Photo</span>
                     <img src="/uploads/<%=foundUser.imgURL %>" alt="" class="img">
                 </div>
-                <span class="footer mt-5" style="color: #32a451;">Accepted by Admin</span>
-                <%} else {%>
-                    <div class="name-field">
-                        <span class="name-label mb-2">Name</span>
-                        <span class="name">
-                            <%= foundUser.username %>
-                        </span>
-                    </div>
-
-                    <div class="img-field mt-3">
-                        <span class="name-label mb-2">Photo</span>
-                        <img src="/images/dp.jpeg" alt="" class="img">
-                    </div>
+                <% if(foundUser.verified){ %>
+                    <span class="footer mt-5" style="color: #32a451;">Accepted by Admin</span>
+                <% } else { %>
                     <span class="footer mt-5" style="color:red">Not Accepted by Admin</span>
-                    <%}%>
+                <% } %>
+                
+            <%} else {%>
+                <div class="name-field">
+                    <span class="name-label mb-2">Name</span>
+                    <span class="name">
+                        <%= foundUser.username %>
+                    </span>
+                </div>
+
+                <div class="img-field mt-3">
+                    <span class="name-label mb-2">Photo</span>
+                    <img src="/images/dp.jpeg" alt="" class="img">
+                </div>
+                <span class="footer mt-5" style="color:red">Not Accepted by Admin</span>
+            <% } %>
         </div>
     </div>
 

@@ -53,6 +53,11 @@ img{
     text-align: center;
 }
 
+.text-box{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
 @media (max-width: 992px) {
 
     .main-container {
