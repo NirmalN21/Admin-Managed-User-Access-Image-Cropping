@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    height: 100vh;
+}
+
+.create-user-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 60%;
+}
+
+label{
+    font-weight: 500;
+    color: rgb(108, 108, 108);
+}
+
+.login-header{
+    margin-top: 3rem;
+}
+
+.button {
+    color: #fff;
+    background-color: #0500ff;
+    border: none;
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.user-section {
+    border-left: 1px solid rgb(119, 119, 119);
+}
+
+.view-user-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+}
+
+.outer-box {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaecff;
+    width: 80%;
+    height: 8rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.inner-box {
+    display: flex;
+    background-color: #fff;
+    width: 80%;
+    height: 3rem;
+    border-radius: 4px;
+    border: 1px solid #bababa;
+}
+
+.text-box {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.button-container {
+    display: flex;
+    margin: auto;
+    justify-content: end;
+    width: 80%;
+}
+
+.view-button {
+    margin-left: 22rem;
+    color: #fff;
+    background-color: #0500ff;
+    border: none;
+    border-radius: 5px;
+    height: 3rem;
+    width: fit-content;
+    padding: 5px 3rem;
+}
+
+@media (max-width:1200px) {
+    .view-button {
+        padding: 5px 2rem;
+    }
+}
+
+@media (max-width:767px) {
+
+    body {
+        background-color: black;
+    }
+
+    .main-container {
+        height: fit-content;
+    }
+
+    .create-user-header {
+        margin-top: 3rem;
+    }
+
+    .form-container {
+        margin-top: 0rem;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    .login-header{
+        margin-top: 1rem;
+    }
+
+    .view-user-header{
+        margin-top: 1rem;
+    }
+
+    .outer-box{
+        width: 90%;
+        height: 6.5rem;
+    }
+
+    .inner-box{
+        height: 2.5rem;
+    }
+
+    .button-container{
+        width: 90%;
+    }
+}

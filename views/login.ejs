@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="row main-container">
+        <div class="col-md-8 img-container" style="background-color: #03013b;">
+            <img src="/images/spiral.png" alt="spiral" width="60%" class="mx-auto">
+            <img src="/images/logo.jpeg" alt="spiral" width="30%" class="mx-auto logo">
+        </div>
+        <div class="col-md-4">
+            <h2 class="login-header">Admin Login</h2>
+            <div class="form-container">
+                <form style="width: 80%;" method="post" action="/admin/login" id="loginForm">
+                    <div class="login-header form-group mb-3">
+                        <input type="number" class="form-control" id="inputUsername" aria-describedby="emailHelp"
+                        onclick="onType(event)" placeholder="User ID">
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" onclick="onType(event)">
+                    </div>
+                    <button type="submit" onclick="submitForm(event)" class="button">Login</button>
+                </form>
+            </div>
+            <small class="errorMessage d-flex justify-content-start mt-1" style="color: red;"></small>
+            <div class="change-user">
+                <span id="user" data-user="admin">Not an Admin?</span>
+                <a href="#" id="user-btn" onclick="changeUser(event)">Click here for User Login</a>  
+            </div>  
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+
+    <script src="scripts/login.js"></script>
+</body>
+
+</html>
