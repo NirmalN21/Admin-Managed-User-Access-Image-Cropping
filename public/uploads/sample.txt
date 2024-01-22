@@ -1,0 +1,1 @@
+git ignore was not allowing the uploading of empty folder
