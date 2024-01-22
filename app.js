@@ -25,5 +25,5 @@ app.use(userRoutes);
 app.use(adminRoutes);
 
 app.listen(port, () => {
-    console.log(`Server started at http://localhost:${port}`);
+    console.log('\x1b[37mServer started at \x1b[34mhttp://localhost:%s\x1b[0m', port);
 });
